@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../drd/vendor/barryvdh/laravel-debugbar" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/barryvdh/laravel-ide-helper" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/barryvdh/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/dnoegel/php-xdg-base-dir" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/dompdf/dompdf" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/erusev/parsedown" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/folklore/image" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/fzaninotto/faker" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/guzzlehttp/promises" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/hamcrest/hamcrest-php" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/imagine/imagine" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/jakub-onderka/php-console-color" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/jakub-onderka/php-console-highlighter" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/jeremeamia/SuperClosure" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/laravel/framework" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/laravel/tinker" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/laravelcollective/html" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/league/flysystem" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/league/fractal" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/maatwebsite/excel" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/maximebf/debugbar" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/mockery/mockery" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/mpdf/mpdf" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/mtdowling/cron-expression" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/myclabs/deep-copy" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/nesbot/carbon" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/nikic/php-parser" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phenx/php-font-lib" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpdocumentor/reflection-common" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpoffice/phpexcel" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/psy/psysh" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/ramsey/uuid" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/code-unit-reverse-lookup" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/object-enumerator" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/resource-operations" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/setasign/fpdi" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/swiftmailer/swiftmailer" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/class-loader" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/css-selector" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/debug" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/event-dispatcher" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/http-foundation" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/http-kernel" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/polyfill-php56" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/polyfill-util" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/routing" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/translation" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/var-dumper" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/tijsverkoyen/css-to-inline-styles" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/vlucas/phpdotenv" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/webmozart/assert" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/yajra/laravel-datatables-oracle" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/yajra/laravel-oci8" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/yajra/laravel-pdo-via-oci8" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../drd/vendor/barryvdh/laravel-debugbar" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/barryvdh/laravel-ide-helper" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/barryvdh/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/dnoegel/php-xdg-base-dir" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/dompdf/dompdf" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/erusev/parsedown" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/folklore/image" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/fzaninotto/faker" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/guzzlehttp/guzzle" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/guzzlehttp/promises" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/hamcrest/hamcrest-php" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/imagine/imagine" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/jakub-onderka/php-console-color" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/jakub-onderka/php-console-highlighter" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/jeremeamia/SuperClosure" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/laravel/framework" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/laravel/tinker" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/laravelcollective/html" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/league/flysystem" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/league/fractal" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/maatwebsite/excel" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/maximebf/debugbar" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/mockery/mockery" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/mpdf/mpdf" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/mtdowling/cron-expression" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/myclabs/deep-copy" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/nesbot/carbon" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/nikic/php-parser" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phenx/php-font-lib" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpdocumentor/reflection-common" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpoffice/phpexcel" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/psr/http-message" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/psy/psysh" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/ramsey/uuid" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/code-unit-reverse-lookup" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/object-enumerator" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/resource-operations" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/setasign/fpdi" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/swiftmailer/swiftmailer" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/class-loader" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/console" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/css-selector" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/debug" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/event-dispatcher" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/http-foundation" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/http-kernel" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/polyfill-php56" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/polyfill-util" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/process" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/routing" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/translation" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/var-dumper" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/tijsverkoyen/css-to-inline-styles" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/vlucas/phpdotenv" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/webmozart/assert" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/yajra/laravel-datatables-oracle" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/yajra/laravel-oci8" />
+          <root url="file://$MODULE_DIR$/../drd/vendor/yajra/laravel-pdo-via-oci8" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/../drd/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/../drd/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

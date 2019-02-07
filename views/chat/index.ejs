@@ -1,0 +1,154 @@
+<% include ../partials/header %>
+<% include ../partials/side %>
+
+<div id="wrapper">
+    <div class="content animate-panel">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hpanel ">
+                    <div id="chat-to" class="panel-heading hbuilt">
+                        Chat
+                    </div>
+                    <div class="panel-body no-padding">
+
+
+                        <div class="row">
+
+                            <div class="col-md-9 ">
+                                <div class="chat-discussion" id="messages">
+                                   <!-- <div class="chat-message left">
+                                        <img class="message-avatar" src="images/a2.jpg" alt="" >
+                                        <div class="message">
+                                            <a class="message-author" href="#"> Michael Smith </a>
+                                            <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                            <span class="message-content">
+											There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+                                            </span>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="chat-users">
+                                    <div class="users-list" id="online-users">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="message" placeholder="Type your message here...">
+                            <input type="hidden" id="to-user">
+                            <span class="input-group-btn">
+                            <button id="send" class="btn btn-success">
+                                Send</button>
+                        </span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+    var img = "<%= user.image %>";
+    var user_name = "<%= user.name %>";
+    var user_id = "<%= user.id %>";
+    var user_ids = [];
+    //user_ids.push(user_id);
+    var socket = io();
+
+    $(function() {
+
+        $("#send").click(function(){
+            //sendMessage({message: $("#message").val()});
+            sendMessage({user_name:user_name,from_id:user_id,to_id:$("#to-user").val(),user_image:img,message: $("#message").val()});
+            $("#message").val('');
+        });
+        getMessages();
+
+       /* $("#message").bind('keypress', function () {
+            socket.emit('typing');
+        });*/
+    });
+
+    socket.emit("add-user", {"user_id":user_id,"user_name": user_name,"user_image":img});
+    socket.on('add-message', addMessages);
+    socket.on('onine-user', getOnlineUser);
+
+   /* socket.on('typing',function (data) {
+       socket.broadcast.emit('typing', {username:socket.username})
+    });*/
+
+
+   //Append message in view
+    function addMessages(message){
+        console.log(message)
+        if(message.user_name == user_name){
+            var AddChat = '<div class="chat-message right"><img class="message-avatar" src="img/'+message.user_image+'" alt="" ><div class="message">'+message.user_name+'<span class="message-content"></span>'+ message.message+'</div></div>';
+        } else{
+            var AddChat = '<div class="chat-message left"><img class="message-avatar" src="img/'+message.user_image+'" alt="" ><div class="message">'+message.user_name+'<span class="message-content"></span>'+ message.message+'</div></div>';
+        }
+        $("#messages").append(AddChat);
+    }
+
+    function getMessages(){
+        $.get('http://localhost:3000/chat', function(data) {
+            //data.forEach(addMessages);
+        });
+    }
+
+    //Send message
+    function sendMessage(message){
+        socket.emit("private-message", message);
+        //$.post('http://localhost:3000/chat', message)
+    }
+
+    //Get online user list
+    function getOnlineUser(usrlist) {
+        //Reset user online user list
+        $("#online-users").html('');
+        user_ids = usrlist;
+
+        //Append online user in online list
+        $.each( usrlist, function( key, value ) {
+            var userDetail = '<div class="chat-user"><span class="pull-right label label-success">Online</span><img class="chat-avatar" src="img/'+value.user_image+'" alt="" ><div class="chat-user-name"><a href="javascript:selectUserToChat(\''+key+'\');">'+value.user_name+'</a></div></div>';
+
+            if(key !=user_id)
+            $("#online-users").append(userDetail);
+        });
+    }
+
+    //When user select than show his chat
+    function selectUserToChat(uId) {
+        $("#chat-to").html('');
+        $("#messages").html('');
+        $("#chat-to").append(user_ids[uId].user_name);
+        $("#to-user").val(uId);
+
+        jQuery.ajax({
+            url:'chat-list',
+            type: "post",
+            data: {to_id: uId},
+            success: function(data){
+                $.each( data.data, function( key, value ) {
+                    addMessages(value);
+                });
+            },
+            error:function(){
+                alert("failure");
+            }
+        });
+    }
+
+</script>
+<% include ../partials/footer %>
