@@ -60,10 +60,12 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
 
+
     var img = "<%= user.image %>";
     var user_name = "<%= user.name %>";
     var user_id = "<%= user.id %>";
-    var user_ids = [];
+    var user_ids = {};
+    var online_users = {};
     //user_ids.push(user_id);
     var socket = io();
 
@@ -74,25 +76,39 @@
             sendMessage({user_name:user_name,from_id:user_id,to_id:$("#to-user").val(),user_image:img,message: $("#message").val()});
             $("#message").val('');
         });
-        getMessages();
 
-       /* $("#message").bind('keypress', function () {
-            socket.emit('typing');
-        });*/
+        getConnectedUserList();
+
+        $("#message").bind('keypress', function () {
+            console.log({from_id:user_id,to_id:$("#to-user").val()})
+            socket.emit('typing',{from_id:user_id,to_id:$("#to-user").val()});
+        });
     });
 
     socket.emit("add-user", {"user_id":user_id,"user_name": user_name,"user_image":img});
     socket.on('add-message', addMessages);
     socket.on('onine-user', getOnlineUser);
 
-   /* socket.on('typing',function (data) {
+    socket.on('typing',function (data) {
+        console.log(data)
        socket.broadcast.emit('typing', {username:socket.username})
-    });*/
+    });
 
+
+   function getOnlineUser(users) {
+       online_users = users;
+
+       $.each( user_ids, function( key, value ) {
+           $("#"+value._id).children('span').html('<span class="pull-right label label-default">Offline</span>');
+       });
+
+       $.each( users, function( key, value ) {
+           $("#"+key).children('span').html('<span class="pull-right label label-success">Online</span>');
+       });
+   }
 
    //Append message in view
     function addMessages(message){
-        console.log(message)
         if(message.user_name == user_name){
             var AddChat = '<div class="chat-message right"><img class="message-avatar" src="img/'+message.user_image+'" alt="" ><div class="message">'+message.user_name+'<span class="message-content"></span>'+ message.message+'</div></div>';
         } else{
@@ -101,11 +117,6 @@
         $("#messages").append(AddChat);
     }
 
-    function getMessages(){
-        $.get('http://localhost:3000/chat', function(data) {
-            //data.forEach(addMessages);
-        });
-    }
 
     //Send message
     function sendMessage(message){
@@ -114,25 +125,29 @@
     }
 
     //Get online user list
-    function getOnlineUser(usrlist) {
+    function getAppeareConnectedUser(usrlist) {
         //Reset user online user list
         $("#online-users").html('');
         user_ids = usrlist;
 
         //Append online user in online list
         $.each( usrlist, function( key, value ) {
-            var userDetail = '<div class="chat-user"><span class="pull-right label label-success">Online</span><img class="chat-avatar" src="img/'+value.user_image+'" alt="" ><div class="chat-user-name"><a href="javascript:selectUserToChat(\''+key+'\');">'+value.user_name+'</a></div></div>';
+            var userDetail = '<div class="chat-user" id="'+value._id+'"><span id="online-status"><span class="pull-right label label-default">Offline</span></span><img class="chat-avatar" src="img/'+value.user_image+'" alt="" ><div class="chat-user-name"><a href="javascript:selectUserToChat(\''+value._id+'\','+'\''+value.user_name+'\');">'+value.user_name+'</a></div></div>';
 
             if(key !=user_id)
             $("#online-users").append(userDetail);
         });
+
+        $.each( online_users, function( key, value ) {
+            $("#"+key).children('span').html('<span class="pull-right label label-success">Online</span>');
+        });
     }
 
     //When user select than show his chat
-    function selectUserToChat(uId) {
+    function selectUserToChat(uId, uName) {
         $("#chat-to").html('');
         $("#messages").html('');
-        $("#chat-to").append(user_ids[uId].user_name);
+        $("#chat-to").append(uName);
         $("#to-user").val(uId);
 
         jQuery.ajax({
@@ -143,6 +158,19 @@
                 $.each( data.data, function( key, value ) {
                     addMessages(value);
                 });
+            },
+            error:function(){
+                alert("failure");
+            }
+        });
+    }
+
+    function getConnectedUserList() {
+        jQuery.ajax({
+            url:'conntectes-users',
+            async:false,
+            success: function(data){
+                getAppeareConnectedUser(data);
             },
             error:function(){
                 alert("failure");

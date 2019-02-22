@@ -36,7 +36,9 @@ indexRouter.get('/eventApi', eventControllers.eventApi);
 indexRouter.post('/eventAdd',require('connect-ensure-login').ensureLoggedIn(), eventControllers.add);
 //Chat Route
 indexRouter.get('/chat',chatControllers.index);
-indexRouter.post('/chat-list',chatControllers.getList);
+indexRouter.post('/chat-list',chatControllers.getChatList);
+indexRouter.get('/conntectes-users',chatControllers.conntedUsers);
+//indexRouter.get('/online-user-list',chatControllers.getUserList);
 
 
 

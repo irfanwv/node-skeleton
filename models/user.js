@@ -68,6 +68,6 @@ var getUsers = function(){
 };*/
 
 
- module.exports = { createUser : createUser, getUsers:getUsers,User: User };
+// module.exports = { createUser : createUser, getUsers:getUsers,User: User };
 /* module.exports = { User: User };
  module.exports = obj;*/

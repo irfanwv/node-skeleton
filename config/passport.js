@@ -18,7 +18,7 @@ module.exports = function(passport) {
     passport.use(new LocalStrategy(
         function(email, password, cb) {
             console.log(email)
-            User.User.findOne({email:email}, function(err, user) {
+            User.findOne({email:email}, function(err, user) {
                 if (err) { return cb(err); }
                 if (!user) { return cb(null, false); }
                 if (user.password != password) { return cb(null, false); }
@@ -40,7 +40,7 @@ module.exports = function(passport) {
     });
 
     passport.deserializeUser(function(id, cb) {
-        User.User.findById(id, function (err, user) {
+        User.findById(id, function (err, user) {
             if (err) { return cb(err); }
             cb(null, user);
         });

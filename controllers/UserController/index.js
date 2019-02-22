@@ -44,13 +44,13 @@ var UserController = {};
 
         // This is callback for total count
         var countCallBack = function(callback) {
-            User.User.find(searchQry,{name:1,email:1,mobile_number:1,dept_id_FK:1}).count(function (e, count) {
+            User.find(searchQry,{name:1,email:1,mobile_number:1,dept_id_FK:1}).count(function (e, count) {
                 callback(count);
             });
         };
 
         //This method return user list
-        User.User.find(searchQry,
+        User.find(searchQry,
             {name:1,email:1,mobile_number:1,dept_id_FK:1},function (err, userJson) {
             if(err){
                 console.log(err);

@@ -5,14 +5,17 @@ module.exports = function(server) {
     global.io = require('socket.io').listen(server);
     io.on('connection', function (socket, req) {
 
+
         //Removing the socket on disconnect
         socket.on('disconnect', function () {
+            console.log('Disconnect')
             for (var name in clients) {
                 if (clients[name].socket === socket.id) {
                     delete clients[name];
                     break;
                 }
             }
+            io.emit('onine-user', clients);
         });
 
         //Add user
@@ -23,9 +26,13 @@ module.exports = function(server) {
                 "user_image": data.user_image
             };
 
+
+
+            ChatController.getUserList(data,clients);
             //Add user in online array
             io.emit('onine-user', clients);
-        });
+        } );
+
 
         //Send point to point message
         socket.on('private-message', function (data) {
@@ -51,4 +58,6 @@ module.exports = function(server) {
         });
 
     });
+
+
 }
